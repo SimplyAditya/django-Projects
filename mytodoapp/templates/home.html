@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="/static/styles/navbar.css"></link>
+    <link rel="stylesheet" href="/static/styles/home.css"></link>
+</head>
+
+<body>
+    {% include "navbar.html" %}
+    <div id="emptyspace"></div>
+    <div id="addnotecontainer">
+        {% comment %} <div class="addnote"> {% endcomment %}
+            <form method="POST">
+                {% csrf_token %}
+            <input name="newnoteheading" id="newnoteheading" placeholder="Title" required>
+            <input name="newnotedescription" id="newnotedescription" placeholder="Add a Note" required>
+            <button type="submit" id="save">Save</button>
+        </form>
+        {% comment %} </div> {% endcomment %}
+    </div>
+        <div class="container">
+            {%for i in data %}
+            <div class="format">
+                <div class="heading">
+                    <h><b>{{i.heading}}</b></h6>
+                </div>
+                <div class="description">
+                    {{i.description}}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+</body>
+
+</html>

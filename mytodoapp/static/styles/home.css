@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    border-radius: 10px;
+    
+}
+#emptyspace{
+    height: 6rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.format{
+    border: 1px solid black;
+    width: 20rem;
+    height: fit-content;
+    padding: auto;
+    margin: 10px;
+    flex-grow: 0;
+    
+}
+.heading{
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+    text-align: center;
+    background-color: rgba(243, 243, 61, 0.938);
+}
+.description{
+    padding: 10px;
+}
+
+form{
+    width: 60%;
+    height: fit-content;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+}
+
+#newnoteheading,#newnotedescription{
+    display: block;
+    width: 100%;
+    border-radius: 0%;
+    padding: 0.5rem;
+}
+#newnoteheading{
+    margin-bottom: 0%;
+    margin-top: 1rem;
+    border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+    border-bottom: 0px;
+}
+#newnotedescription{
+    margin-top: 0%;
+    margin-bottom: 1rem;
+    min-height: 2rem;
+    max-lines: 8;
+    border-radius: 0px 0px 10px 10px / 0px 0px 10px 10px;
+    border-top: 0px;
+}
+input:focus{
+    outline: none;
+}
+#addnotecontainer{
+    display: flex;
+    justify-content: center;
+}
+#save{
+    border-radius: 10px;
+    background-color: green; 
+    color: aliceblue;
+    padding: 10px;
+    border: 0px;
+    width: 60px;
+    aspect-ratio: 3/2;
+    /* background: linear-gradient(145deg, #ffffff, green); */
+    box-shadow: 5px 5px 15px #aaaaaa, -5px -5px 15px #ffffff;
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 3rem;
+}
+#save:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    box-shadow: 10px 10px 20px #aaaaaa, -10px -10px 20px #ffffff;
+}
+#save{
+    margin-left: 45%;
+}
