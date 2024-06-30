@@ -14,6 +14,3 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mytodoapp.settings')
 
 application = get_wsgi_application()
-
-# api/wsgi.py
-app = get_wsgi_application()

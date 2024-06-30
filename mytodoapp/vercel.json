@@ -1,14 +1,15 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "path/to/wsgi.py",
+        "src": "mytodoapp/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "path/to/wsgi.py"
+        "dest": "mytodoapp/wsgi.py"
       }
     ]
   }
